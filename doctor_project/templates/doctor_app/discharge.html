@@ -1,0 +1,87 @@
+{%  extends "doctor_app/base.html" %}
+{% block body_block %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static "css\doctor.css" %}"/>
+<h1>Patient under treatment  in hospital</h1>
+<h4>Check it out!</h4>
+
+
+<div class="Djangolevel2">
+  {% if access_records %}
+   <table>
+    <thead>
+      <th>Patient Name</th>
+      <th>Email</th>
+    </thead>
+
+
+    {% for acc in  access_records %}
+    <tr>
+      <td>{{acc.first_name}}</td>
+      <td>{{acc.email}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+  {% else %}
+    <p>No Accessed Record</p>
+     {% endif %}
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Discharge</title>
+
+
+  </head>
+  <body>
+
+    <link rel="stylesheet" href="{% static "css\doctor.css" %}"/>
+    <h1>Patient under treatment  in hospital</h1>
+    <h4>Check it out!</h4>
+
+
+    <div class="Djangolevel2">
+      {% if access_records %}
+       <table>
+        <thead>
+          <th>Patient Name</th>
+          <th>Email</th>
+        </thead>
+
+
+        {% for acc in  access_records %}
+        <tr>
+          <td>{{acc.first_name}}</td>
+          <td>{{acc.email}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+      {% else %}
+        <p>No Accessed Record</p>
+         {% endif %}
+
+    </div>
+
+
+  </body>
+</html>

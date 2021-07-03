@@ -1,0 +1,32 @@
+  <!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index page</title>
+    <link rel="stylesheet" href="{% static "css\index.css" %}"/>
+  </head>
+  <body>
+    {%  extends "doctor_app/base.html" %}
+    {% block body_block %}
+
+    <div class="jumbotron">
+      <h1>Django Level 5</h1>
+
+    </div>
+
+    {% endblock %}
+
+
+    <div class="center">
+     <h1>Welcome to doctor site</h1>
+     <h1>
+     <a href="{% url 'doctor_site:other' %}">Register here</a>
+     </h1>
+
+
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,7 @@
+.center {
+margin: auto;
+width: 30%;
+/*border: 5px solid #FFFF00;*/
+padding: 200px;
+}
+body {background-color: Green;}
